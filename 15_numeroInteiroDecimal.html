@@ -1,0 +1,22 @@
+<script>
+    /*
+    //PROBLEMA
+    Faça um script que peça um número e informe se o número é inteiro ou decimal.
+    Dica: utilize uma função de arredondamento.
+    */
+
+    function verificarTipoNumero(numero) {
+ 
+  if (Math.round(numero) === numero) {
+    return "inteiro";
+  } else {
+    return "decimal";
+  }
+}
+
+const numero = 3.14;
+
+const tipoNumero = verificarTipoNumero(numero);
+console.log(`O número é ${tipoNumero}.`);
+
+</script>

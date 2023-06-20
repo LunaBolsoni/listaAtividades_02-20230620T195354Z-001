@@ -1,0 +1,31 @@
+
+<script>
+    //Problema
+    // Receba os três lados de um triângulo. Informe se os valores podem ser um triângulo. Indique, caso os lados formem um triângulo, se o mesmo é: equilátero, isósceles ou escaleno. Dica: pesquise sobre a regra para saber se os lados formam um triângulo e também sobre os tipos de triângulos.
+
+const valorSaque = parseInt(prompt("Digite o valor do saque (entre 10 e 600 reais):"));
+
+
+if (valorSaque >= 10 && valorSaque <= 600) {
+  
+  const notas100 = Math.floor(valorSaque / 100);
+  const valorRestante100 = valorSaque % 100;
+
+  const notas50 = Math.floor(valorRestante100 / 50);
+  const valorRestante50 = valorRestante100 % 50;
+
+  const notas10 = Math.floor(valorRestante50 / 10);
+  const valorRestante10 = valorRestante50 % 10;
+
+  const notas5 = Math.floor(valorRestante10 / 5);
+  const valorRestante5 = valorRestante10 % 5;
+
+  const notas1 = valorRestante5;
+
+
+  alert(`Notas de 100: ${notas100}\nNotas de 50: ${notas50}\nNotas de 10: ${notas10}\nNotas de 5: ${notas5}\nNotas de 1: ${notas1}`);
+} else {
+  alert("Valor inválido. Digite um valor entre 10 e 600 reais.");
+}
+
+</script>
